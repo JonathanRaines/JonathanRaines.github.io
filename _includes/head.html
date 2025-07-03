@@ -2,6 +2,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jonathan Raines</title>
+    <script>
+        // Set theme immediately to prevent flash
+        (function () {
+            const savedTheme = localStorage.getItem("theme");
+            const prefersDarkScheme = window.matchMedia(
+                "(prefers-color-scheme: dark)",
+            ).matches;
+
+            if (savedTheme) {
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            } else if (prefersDarkScheme) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ 'css/blog.css' | relative_url }}" />
     <script src="{{ 'js/theme.js' | relative_url }}"></script>
