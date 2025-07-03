@@ -7,6 +7,7 @@
     --subheading-text-color: var(--ctp-latte-subtext0);
     --label-text-color: var(--ctp-latte-subtext1);
     --label-text-hover-color: var(--ctp-latte-blue);
+    --link-color: var(--ctp-latte-blue);
     --overlay-bg: var(--ctp-latte-mantle);
     --border-color: var(--ctp-latte-overlay0);
     --border-active-color: var(--ctp-latte-lavender);
@@ -21,6 +22,7 @@
     --subheading-text-color: var(--ctp-frappe-subtext0);
     --label-text-color: var(--ctp-frappe-subtext1);
     --label-text-hover-color: var(--ctp-frappe-blue);
+    --link-color: var(--ctp-frappe-blue);
     --overlay-bg: var(--ctp-frappe-mantle);
     --border-color: var(--ctp-frappe-overlay0);
     --border-active-color: var(--ctp-frappe-lavender);
@@ -93,6 +95,17 @@ main {
     padding: 0 2rem;
 }
 
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--link-color);
+}
+
 .hero {
     text-align: center;
     padding: 8rem 0 4rem;
@@ -123,7 +136,6 @@ main {
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 2rem;
-    color: var(--text-color);
 }
 
 .section p {
@@ -174,17 +186,6 @@ main {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: var(--text-color);
-}
-
-#contact a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
-}
-
-#contact a:hover {
-    border-bottom-color: var(--secondary-color);
 }
 
 footer {
