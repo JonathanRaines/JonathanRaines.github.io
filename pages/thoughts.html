@@ -1,0 +1,25 @@
+---
+layout: page
+permalink: /thoughts/
+---
+
+<section class="hero">
+    <h1>Thoughts</h1>
+    <p>Writing <em>is</em> thinking.</p>
+</section>
+<section>
+    {% for post in site.posts %}
+    <a class="blog-card" href="{{ post.url | absolute_url }}">
+        <article>
+            <h2>{{ post.title }}</h2>
+            <div class="blog-meta">
+                <p>{{ post.date | date: "%B %d, %Y" }}</p>
+            </div>
+            {% for tag in post.tags %}
+            <!-- <div class="tag">{{tag}}</div> -->
+            {% endfor %}
+            <p>{{ post.excerpt }}</p>
+        </article>
+    </a>
+    {% endfor %}
+</section>
